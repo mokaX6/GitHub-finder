@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-title">
+        <img src="GitHub.png" alt="GitHub Logo" class="logo-img">
+        <h1>devfinder</h1>
+      </div>
+      <p>Search GitHub users & explore repositories instantly</p>
+    </header>
+
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="input" placeholder="Search GitHub username..." autocomplete="off">
+      <button id="sBtn" class="search-btn">Search</button>
+    </div>
+
+    <!-- Error Container -->
+    <div id="error-container" class="error-container hidden">
+      No results found or user does not exist. Please try another username!
+    </div>
+
+    <!-- Profile Card -->
+    <div id="profile-container" class="profile-card hidden">
+      <div class="profile-header">
+        <img id="avatar" src="" alt="User Avatar">
+        <div class="user-titles">
+          <h2 id="name"></h2>
+          <span id="username"></span>
+        </div>
+      </div>
+
+      <p id="bio" class="bio"></p>
+
+      <div class="status">
+        <div class="stat-item">
+          <span class="stat-label">Repos</span>
+          <span id="repos-count" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Followers</span>
+          <span id="followers-count" class="stat-value">0</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">Following</span>
+          <span id="following-count" class="stat-value">0</span>
+        </div>
+      </div>
+
+      <div class="additional-info">
+        <div class="info-item" id="location-box">
+          <span>📍</span> <span id="location">Not Available</span>
+        </div>
+        <div class="info-item" id="blog-box">
+          <span>🔗</span> <a id="blog" href="#" target="_blank">Not Available</a>
+        </div>
+        <div class="info-item" id="joined-box">
+          <span>📅</span> <span id="joined-date">Joined Date</span>
+        </div>
+      </div>
+
+      <!-- Repositories Section -->
+      <div class="repos-section">
+        <h3>📁 Top Repositories</h3>
+        <div id="repos-container" class="repos-container">
+          <!-- Dynamically populated repositories -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
